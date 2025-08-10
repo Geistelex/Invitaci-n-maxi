@@ -9,31 +9,56 @@
 
 <body>
     <div class="contenedor">
-        <h1>¡Soy Maximiliano y te invito a mi <span id="edad">septimo</span> cumpleanos con tematica de Ninjago!</h1>
-        <div class="fila-evento" style="display: flex; align-items: center;">
+        <h1>¡Soy Maximiliano y te invito a mi <span id="edad">séptimo</span> cumpleaños con temática de Ninjago!</h1>
+        
+        <div class="fila-evento">
             <div class="info-evento">
-                <div class="info-texto" style="flex:1;">
+                <div class="info-texto">
                     <p><strong>Fecha:</strong> 30 de agosto de 2025</p>
                     <p><strong>Hora:</strong> 02:30 pm</p>
-                    <p><strong>Lugar:</strong> Circulo Militar, Pampatar</p>
+                    <p><strong>Lugar:</strong> Círculo Militar, Pampatar</p>
                 </div>
-                <div id="gifFiesta" style="display:none; margin-left:20px;">
-                    <img src="./assets/ninjago_trans.gif" style="width:300px; background:transparent;" alt="Fiesta GIF">
+            </div>
+            
+            <div id="gifFiesta" style="display:none;">
+                <img src="./assets/ninjago_trans.gif" alt="Animación Ninjago">
+            </div>
+            
+            <!-- Contador movido al final del fila-evento -->
+            <div id="contador-regresivo">
+                <h2>¡FALTA POCO!</h2>
+                <div class="tiempo-restante">
+                    <div class="tiempo">
+                        <span id="dias">00</span>
+                        <span>Días</span>
+                    </div>
+                    <div class="tiempo">
+                        <span id="horas">00</span>
+                        <span>Horas</span>
+                    </div>
+                    <div class="tiempo">
+                        <span id="minutos">00</span>
+                        <span>Minutos</span>
+                    </div>
+                    <div class="tiempo">
+                        <span id="segundos">00</span>
+                        <span>Segundos</span>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <div class="botones">
             <button id="confirmarBtn">Confirmar Asistencia</button>
-            <button id="ubicacionBtn">Ver Ubicacion</button>
-        </div>
-        <div id="contenedorMapa" style="display:none; margin-top:20px;">
+            <button id="ubicacionBtn">Ver Ubicación</button>
         </div>
         
+        <div id="contenedorMapa" style="display:none;">
+        </div>
     </div>
+
     <audio id="musicaNinjago" src="./assets/opening ninjago.mp3"></audio>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
-
 </html>
-
