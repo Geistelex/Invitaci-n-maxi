@@ -142,3 +142,32 @@ function ocultarGifProgresivo() {
         gifFiesta.classList.remove('fade-out');
     }, 1500);
 }
+
+// Contador regresivo
+function actualizarContador() {
+    const fechaFiesta = new Date('August 30, 2025 14:30:00').getTime();
+    const ahora = new Date().getTime();
+    const diferencia = fechaFiesta - ahora;
+
+    // Cálculos de tiempo
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    // Actualizar el DOM
+    document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+    document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+    document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+    document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+
+    // Si la fecha ya pasó
+    if (diferencia < 0) {
+        clearInterval(intervalo);
+        document.getElementById('contador-regresivo').innerHTML = '<h2>¡La fiesta está en marcha!</h2>';
+    }
+}
+
+// Actualizar cada segundo
+const intervalo = setInterval(actualizarContador, 1000);
+actualizarContador(); // Ejecutar inmediatamente
