@@ -30,4 +30,10 @@ app.get('/total', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+app.post('/reset', (req, res) => {
+    contador = 0;
+  fs.writeFileSync(COUNTER_FILE, JSON.stringify({ total: 0 })); // Si usas archivo
+    res.send('Contador reiniciado a 0');
+});
+
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
