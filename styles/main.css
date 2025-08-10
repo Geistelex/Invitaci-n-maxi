@@ -1,0 +1,109 @@
+@font-face{
+    font-family: 'Ninjago';
+    src: url('../styles/fonts/lastninja.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Ninjago', cursive; /* Fuente Ninjago */
+    background: url('../assets/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff; /* Texto dorado */
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 15px;
+    max-width: 85%;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 12px 24px;
+    font-family: 'Ninjago', cursive;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.info-evento {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    min-width: 220px;
+    flex: 1;
+    text-align: left;
+    /* Quita el padding aquí */
+}
+
+.info-texto {
+    flex: 1;
+    padding: 10px 20px; /* Agrega el padding aquí solo para el texto */
+}
+
+.fila-evento {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info-evento {
+    flex: 1;
+}
+
+#confirmarBtn {
+    background-color: #FF5722; /* Naranja Ninjago */
+    color: white;
+}
+
+#ubicacionBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:disabled {
+    background-color: #9E9E9E !important;
+    cursor: not-allowed;
+}
+#contenedorMapa iframe {
+    border-radius: 15px;
+}
+
+#gifFiesta {
+    display: flex;
+    align-items: flex-start; /* Alinea arriba */
+}
+
+#gifFiesta img {
+    background: transparent;
+    width: 400px;
+    border: none;
+}
+
+.fade-out {
+    animation: fadeOutGif 1.5s forwards;
+}
+
+@keyframes fadeOutGif {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
