@@ -3,7 +3,16 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
+// Habilita CORS (¡esto es clave!)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Permite cualquier origen
+  res.header('Access-Control-Allow-Methods', 'GET, POST'); // Métodos permitidos
+  res.header('Access-Control-Allow-Headers', 'Content-Type'); // Cabeceras permitidas
+  next();
+});
+
 app.use(express.json());
+
 
 // Archivo para guardar el contador
 const COUNTER_FILE = path.join(__dirname, 'counter.json');
@@ -37,3 +46,4 @@ app.post('/reset', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Servidor en puerto ${PORT}`));
+
