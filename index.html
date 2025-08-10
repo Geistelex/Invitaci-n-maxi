@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Invitación Fiesta Maxi!</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>¡Soy Maximiliano y te invito a mi <span id="edad">septimo</span> cumpleanos con tematica de Ninjago!</h1>
+        <div class="fila-evento" style="display: flex; align-items: center;">
+            <div class="info-evento">
+                <div class="info-texto" style="flex:1;">
+                    <p><strong>Fecha:</strong> 30 de agosto de 2025</p>
+                    <p><strong>Hora:</strong> 02:30 pm</p>
+                    <p><strong>Lugar:</strong> Circulo Militar, Pampatar</p>
+                </div>
+                <div id="gifFiesta" style="display:none; margin-left:20px;">
+                    <img src="/assets/ninjago_trans.gif" style="width:300px; background:transparent;" alt="Fiesta GIF">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <button id="confirmarBtn">Confirmar Asistencia</button>
+            <button id="ubicacionBtn">Ver Ubicacion</button>
+        </div>
+        <div id="contenedorMapa" style="display:none; margin-top:20px;">
+        </div>
+        
+    </div>
+    <audio id="musicaNinjago" src="/assets/opening ninjago.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+</html>
