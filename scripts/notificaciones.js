@@ -1,5 +1,5 @@
 const TELEGRAM_BOT_TOKEN = '8263556444:AAFNu7oh4yqDTI2H2mdEMi7rAFKRHTKh8MM'; // Reemplaza con tu token
-const TELEGRAM_CHAT_ID = '6925942697'; // Reemplaza con tu Chat ID
+const TELEGRAM_CHAT_ID = '8149518707'; // Reemplaza con tu Chat ID
 const SERVER_URL = 'https://invitaci-n-maxi.onrender.com'; // Reemplaza con tu URL de Render
 
 export async function notificarConfirmacion(idInvitado) {
@@ -29,3 +29,4 @@ export async function notificarConfirmacion(idInvitado) {
     }
 
 }
+
